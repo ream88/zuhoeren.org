@@ -3,11 +3,16 @@
 </head>
 
 <body>
+  {{loginButtons}}
   {{> hello}}
 </body>
 
 <template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+  {{#if currentUser}}
+    <p>logged in</p>
+  {{else}}
+    <h1>Hello World!</h1>
+    {{greeting}}
+    <input type="button" value="Click" />
+  {{/if}}
 </template>
