@@ -1,0 +1,12 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+}
+
+ul li {
+  display: inline-block;
+  float: left;
+}
+
+video {
+  height: 200px;
+}

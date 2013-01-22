@@ -1,18 +1,30 @@
 <head>
-  <title>zuhoeren.org</title>
+  <title>test</title>
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  {{loginButtons}}
-  {{> hello}}
+  <ul>
+    <li>
+      <h1>Local</h1>
+      <video id="local" autoplay="autoplay" controls="controls"></video>
+    </li>
+    <li>
+      <h1>Remote</h1>
+      <video id="remote" autoplay="autoplay" controls="controls"></video>
+    </li>
+  </ul>
 </body>
 
-<template name="hello">
-  {{#if currentUser}}
-    <p>logged in</p>
-  {{else}}
-    <h1>Hello World!</h1>
-    {{greeting}}
-    <input type="button" value="Click" />
-  {{/if}}
+<template name="congregations">
+  <h1>Versammlungen</h1>
+  
+  <ul>
+    {{#each congregations}}
+      <li>
+        <a href="{{_id}}">{{_id}}</a>
+      </li>
+    {{/each}}
+  </ul>
 </template>
