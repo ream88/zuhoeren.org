@@ -1,9 +1,15 @@
 $white: #f6f6f6;
 
+@import "normalize.css";
+
 @import "retina-background-image";
 
 body {
   background-color: $white;
+}
+
+p {
+  margin: 10px;
 }
 
 #button {
@@ -13,7 +19,9 @@ body {
   width: image-width('button.png');
 
   display: inline-block;
-  
+
+  background-color: #77CF21;
+
   &:active {
     background-position: bottom;
   }
