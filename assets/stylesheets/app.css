@@ -6,14 +6,15 @@ p {
   margin: 10px; }
 
 #button {
-  background-image: url('../images/button.png?1358963673');
+  background-image: url('../images/button.png?1358970916');
   height: 181px;
   width: 181px;
-  display: inline-block;
-  -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  display: inline-block; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     #button {
-      background-image: url('../images/button@2x.png?1358963692');
+      background-image: url('../images/button@2x.png?1358970946');
       background-size: 181px 181px; } }
   #button:active {
     background-position: bottom; }

@@ -18,9 +18,9 @@ p {
   height: image-height('button.png');
   width: image-width('button.png');
 
-  display: inline-block;
-
+  -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  display: inline-block;
 
   &:active {
     background-position: bottom;
