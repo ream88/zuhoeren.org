@@ -20,10 +20,18 @@ p {
 
   display: inline-block;
 
-  background-color: #77CF21;
+  -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
   &:active {
     background-position: bottom;
+  }
+
+  &.online {
+    background-color: #77CF21;
+  }
+
+  &.offline {
+    background-color: #FC3A3D;
   }
 }
 
