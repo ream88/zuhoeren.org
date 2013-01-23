@@ -1,0 +1,14 @@
+body {
+  background-color: #f6f6f6; }
+
+#button {
+  background-image: url('../images/button.png?1358955474');
+  height: 358px;
+  width: 179px;
+  display: inline-block; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
+    #button {
+      background-image: url('../images/button@2x.png?1358955474');
+      background-size: 179px 358px; } }
+  #button:active {
+    background-position: bottom; }

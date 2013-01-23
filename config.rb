@@ -3,7 +3,7 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/stylesheets"
-sass_dir = "assets/sass"
+sass_dir = "assets/scss"
 images_dir = "assets/images"
 javascripts_dir = "assets/javascripts"
 
@@ -11,7 +11,7 @@ output_style = :nested
 environment = :development
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+relative_assets = true
 
 line_comments = false
 color_output = false

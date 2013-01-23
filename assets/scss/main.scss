@@ -1,0 +1,21 @@
+$white: #f6f6f6;
+
+@import "retina-background-image";
+
+body {
+  background-color: $white;
+}
+
+#button {
+  @include retina-background-image('button.png', 'button@2x.png');
+
+  height: image-height('button.png');
+  width: image-width('button.png');
+
+  display: inline-block;
+  
+  &:active {
+    background-position: bottom;
+  }
+}
+
