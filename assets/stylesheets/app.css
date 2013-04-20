@@ -5,20 +5,30 @@ body {
 p {
   margin: 10px; }
 
+@keyframes red-to-green {
+  0% {
+    background-color: #e74d3c; }
+
+  30% {
+    background-color: #f1c40e; }
+
+  100% {
+    background-color: #2ecc70; } }
+
 #button {
-  background-image: url('../images/button.png?1358970916');
+  background-image: url('../images/button.png?1359301359');
   height: 181px;
   width: 181px;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  display: inline-block; }
+  display: inline-block;
+  background-color: #e74d3c; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     #button {
-      background-image: url('../images/button@2x.png?1358970946');
+      background-image: url('../images/button@2x.png?1359301371');
       background-size: 181px 181px; } }
   #button:active {
     background-position: bottom; }
   #button.online {
-    background-color: #77CF21; }
-  #button.offline {
-    background-color: #FC3A3D; }
+    animation-duration: 0.5s;
+    animation-name: red-to-green;
+    animation-timing-function: ease-in-out;
+    background-color: #2ecc70; }

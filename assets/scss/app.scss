@@ -1,7 +1,9 @@
-$white: #f6f6f6;
+$white:  #f6f6f6;
+$red:    hsl(6, 78%, 57%);
+$orange: hsl(48, 89%, 50%);
+$green:  hsl(145, 63%, 49%);
 
 @import "normalize.css";
-
 @import "retina-background-image";
 
 body {
@@ -12,26 +14,40 @@ p {
   margin: 10px;
 }
 
+@keyframes red-to-green {
+  0% {
+    background-color: $red;
+  }
+
+  30% {
+    background-color: change-color($red, $hue: 48, $saturation: 89%, $lightness: 50%);
+  }
+
+  100% {
+    background-color: change-color($red, $hue: 145, $saturation: 63%, $lightness: 49%);
+  }
+}
+
 #button {
-  @include retina-background-image('button.png', 'button@2x.png');
+  @include retina-background-image("button.png", "button@2x.png");
 
-  height: image-height('button.png');
-  width: image-width('button.png');
+  height: image-height("button.png");
+  width: image-width("button.png");
 
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transition: background-color 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860);
   display: inline-block;
+
+  background-color: $red;
 
   &:active {
     background-position: bottom;
   }
 
   &.online {
-    background-color: #77CF21;
-  }
+    animation-duration: 0.5s;
+    animation-name: red-to-green;
+    animation-timing-function: ease-in-out;
 
-  &.offline {
-    background-color: #FC3A3D;
+    background-color: $green;
   }
 }
 
